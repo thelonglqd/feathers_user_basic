@@ -23,7 +23,7 @@
   "scripts": {
     "test": "npm run eslint && npm run mocha",
     "eslint": "eslint src/. test/. --config .eslintrc.json",
-    "start": "node src/",
+    "start": "MONGO_URL=mongodb://localhost:27017/test node src/",
     "mocha": "mocha test/ --recursive"
   },
   "dependencies": {
@@ -35,9 +35,12 @@
     "feathers-errors": "^2.6.3",
     "feathers-hooks": "^1.8.1",
     "feathers-hooks-common": "^3.0.0",
+    "feathers-mongoose": "^5.0.3",
     "feathers-rest": "^1.7.2",
     "feathers-socketio": "^1.5.2",
     "helmet": "^3.5.0",
+    "mongoose": "^4.9.4",
+    "nconf": "^0.8.4",
     "serve-favicon": "^2.4.2",
     "winston": "^2.3.1"
   },
